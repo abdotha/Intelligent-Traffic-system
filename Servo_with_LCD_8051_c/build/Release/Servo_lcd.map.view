@@ -1,0 +1,3 @@
+tool: KEIL_C51
+fileName: Servo_lcd.map
+elfName: Servo_lcd

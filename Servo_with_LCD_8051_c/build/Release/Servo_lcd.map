@@ -1,0 +1,265 @@
+LX51 LINKER/LOCATER V4.66.100.0                                                         05/21/2024  23:24:00  PAGE 1
+
+
+LX51 LINKER/LOCATER V4.66.100.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\LX51.EXE .\BUILD\RELEASE\.OBJ\SRC\LCD.O, .\BUILD\RELEASE\.OBJ\SRC\MAIN.O TO .\BUILD\RELEASE\SERVO_LCD
+>>  PRINT (.\build\Release\Servo_lcd.map) REMOVEUNUSED
+
+
+
+
+PROGRAM RECURSIONS REMOVED FROM CALL TREE
+=========================================
++--> _LCD_COMM/LCD
+<--+ _DELAY/LCD
+
+
++--> _DELAY/LCD
+<--+ _LCD_COMM/LCD
+
+
+
+CPU MODE:     8051 MODE
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\BUILD\RELEASE\.OBJ\SRC\LCD.O (LCD)
+         COMMENT TYPE 0: C51 V9.60.7.0
+  .\BUILD\RELEASE\.OBJ\SRC\MAIN.O (MAIN)
+         COMMENT TYPE 0: C51 V9.60.7.0
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+
+
+ACTIVE MEMORY CLASSES OF MODULE:  .\BUILD\RELEASE\SERVO_LCD (LCD)
+
+BASE        START       END         USED      MEMORY CLASS
+==========================================================
+C:000000H   C:000000H   C:00FFFFH   00024EH   CODE
+I:000000H   I:000000H   I:00007FH   000016H   DATA
+C:000000H   C:000000H   C:00FFFFH   000026H   CONST
+I:000000H   I:000000H   I:0000FFH   000001H   IDATA
+
+
+MEMORY MAP OF MODULE:  .\BUILD\RELEASE\SERVO_LCD (LCD)
+
+
+START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
+=========================================================================
+
+* * * * * * * * * * *   D A T A   M E M O R Y   * * * * * * * * * * * * *
+000000H   000007H   000008H   ---    AT..     DATA           "REG BANK 0"
+000008H   000011H   00000AH   BYTE   UNIT     DATA           _DATA_GROUP_
+000012H   000015H   000004H   BYTE   UNIT     DATA           ?DT?MAIN
+000016H   000016H   000001H   BYTE   UNIT     IDATA          ?STACK
+
+* * * * * * * * * * *   C O D E   M E M O R Y   * * * * * * * * * * * * *
+000000H   000002H   000003H   ---    OFFS..   CODE           ?CO??C_STARTUP?0
+000003H   000018H   000016H   BYTE   UNIT     CODE           ?PR?LCD_INIT?LCD
+000019H   000022H   00000AH   ---    ---      **GAP**
+000023H   000025H   000003H   BYTE   OFFS..   CODE           ?MAIN?00023
+000026H   000057H   000032H   BYTE   UNIT     CODE           ?PR?_LCD_STRING?LCD
+000058H   000084H   00002DH   BYTE   UNIT     CODE           ?C?LIB_CODE
+000085H   0000ABH   000027H   BYTE   UNIT     CODE           ?PR?_DELAY?LCD
+0000ACH   0000CEH   000023H   BYTE   UNIT     CODE           ?PR?MAIN?MAIN
+LX51 LINKER/LOCATER V4.66.100.0                                                       05/21/2024  23:24:00  PAGE 2
+
+
+0000CFH   0000E4H   000016H   BYTE   UNIT     CODE           ?PR?INITIAL?MAIN
+0000E5H   0000F4H   000010H   BYTE   UNIT     CODE           ?PR?_LCD_COMM?LCD
+0000F5H   000104H   000010H   BYTE   UNIT     CODE           ?PR?_LCD_DATA?LCD
+000105H   000112H   00000EH   BYTE   UNIT     CODE           ?PR?_SERO_DELAY?MAIN
+000113H   00011FH   00000DH   BYTE   UNIT     CODE           ?C_INITSEG
+000120H   00012BH   00000CH   BYTE   UNIT     CODE           ?PR?LCD_CLEAR?LCD
+00012CH   000151H   000026H   BYTE   UNIT     CONST          ?CO?MAIN
+000152H   0007FFH   0006AEH   ---    ---      **GAP**
+000800H   00089FH   0000A0H   BYTE   UNIT     CODE           ?PR?UART_INTERRUPT_HANDLER?MAIN
+0008A0H   00092BH   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
+
+* * * * * * * * *   R E M O V E D     S E G M E N T S   * * * * * * * *
+   *DEL*:           000008H   BYTE   UNIT     CODE           ?PR?UART_RXCHAR?LCD
+
+
+
+OVERLAY MAP OF MODULE:   .\BUILD\RELEASE\SERVO_LCD (LCD)
+
+
+FUNCTION/MODULE                   BIT_GROUP   DATA_GROUP 
+--> CALLED FUNCTION/MODULE       START  STOP  START  STOP
+=========================================================
+UART_INTERRUPT_HANDLER/MAIN      ----- -----  ----- -----
+  +--> LCD_CLEAR/LCD
+  +--> _LCD_STRING/LCD
+
+LCD_CLEAR/LCD                    ----- -----  ----- -----
+  +--> _LCD_COMM/LCD
+  +--> _DELAY/LCD
+
+_LCD_COMM/LCD                    ----- -----  ----- -----
+  +--> _DELAY/LCD
+
+_DELAY/LCD                       ----- -----  ----- -----
+  +--> _LCD_COMM/LCD
+
+_LCD_STRING/LCD                  ----- -----  000DH 0011H
+  +--> _LCD_DATA/LCD
+  +--> _DELAY/LCD
+
+_LCD_DATA/LCD                    ----- -----  ----- -----
+  +--> _DELAY/LCD
+
+*** NEW ROOT *******************
+
+?C_C51STARTUP                    ----- -----  ----- -----
+  +--> MAIN/MAIN
+  +--> ?C_INITSEG
+
+MAIN/MAIN                        ----- -----  ----- -----
+  +--> INITIAL/MAIN
+  +--> LCD_INIT/LCD
+  +--> _LCD_STRING/LCD
+  +--> _SERO_DELAY/MAIN
+
+INITIAL/MAIN                     ----- -----  ----- -----
+
+LCD_INIT/LCD                     ----- -----  ----- -----
+  +--> _DELAY/LCD
+  +--> _LCD_COMM/LCD
+
+_SERO_DELAY/MAIN                 ----- -----  ----- -----
+
+?C_INITSEG                       ----- -----  ----- -----
+
+LX51 LINKER/LOCATER V4.66.100.0                                                       05/21/2024  23:24:00  PAGE 3
+
+
+
+
+PUBLIC SYMBOLS OF MODULE:  .\BUILD\RELEASE\SERVO_LCD (LCD)
+
+
+      VALUE       CLASS    TYPE      PUBLIC SYMBOL NAME
+      =================================================
+      01000058H   CODE     ---       ?C?CLDOPTR
+      00000000H   NUMBER   ---       ?C?CODESEG
+      00000000H   NUMBER   ---       ?C?XDATASEG
+      010008E7H   CODE     ---       ?C_START
+      01000000H   CODE     ---       ?C_STARTUP
+      0100008CH   CODE     ---       _DELAY
+      010000E5H   CODE     ---       _LCD_COMM
+      010000F5H   CODE     ---       _LCD_DATA
+      01000026H   CODE     ---       _LCD_STRING
+      01000105H   CODE     ---       _sero_delay
+      00000013H   DATA     BYTE      high_reset
+      00000014H   DATA     BYTE      high_set
+      010000CFH   CODE     ---       initial
+      01000120H   CODE     ---       LCD_CLEAR
+      01000003H   CODE     ---       LCD_INIT
+      00000015H   DATA     BYTE      low_reset
+      00000012H   DATA     BYTE      low_set
+      010000ACH   CODE     ---       main
+      01000800H   CODE     ---       uart_interrupt_handler
+*DEL*:00000000H   CODE     ---       UART_RxChar
+
+
+
+SYMBOL TABLE OF MODULE:  .\BUILD\RELEASE\SERVO_LCD (LCD)
+
+      VALUE       REP       CLASS    TYPE      SYMBOL NAME
+      ====================================================
+      ---         MODULE    ---      ---       LCD
+      01000026H   PUBLIC    CODE     ---       _LCD_STRING
+      010000F5H   PUBLIC    CODE     ---       _LCD_DATA
+      01000120H   PUBLIC    CODE     ---       LCD_CLEAR
+      01000003H   PUBLIC    CODE     ---       LCD_INIT
+      010000E5H   PUBLIC    CODE     ---       _LCD_COMM
+      0100008CH   PUBLIC    CODE     ---       _DELAY
+
+      01000085H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      0100008CH   BLOCK     CODE     ---       LVL=0
+      0100008CH   BLOCK     CODE     NEAR LAB  LVL=1
+      00000004H   SYMBOL    DATA     VOID      I
+      00000002H   SYMBOL    DATA     VOID      J
+      ---         BLOCKEND  ---      ---       LVL=1
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010000E5H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000003H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000120H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010000F5H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000026H   BLOCK     CODE     ---       LVL=0
+LX51 LINKER/LOCATER V4.66.100.0                                                       05/21/2024  23:24:00  PAGE 4
+
+
+      0100002CH   BLOCK     CODE     NEAR LAB  LVL=1
+      00000010H   SYMBOL    DATA     VOID      i
+      ---         BLOCKEND  ---      ---       LVL=1
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       MAIN
+      00000015H   PUBLIC    DATA     BYTE      low_reset
+      00000014H   PUBLIC    DATA     BYTE      high_set
+      00000013H   PUBLIC    DATA     BYTE      high_reset
+      00000012H   PUBLIC    DATA     BYTE      low_set
+      01000105H   PUBLIC    CODE     ---       _sero_delay
+      010000CFH   PUBLIC    CODE     ---       initial
+      010000ACH   PUBLIC    CODE     ---       main
+      01000800H   PUBLIC    CODE     ---       uart_interrupt_handler
+
+      01000800H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010000ACH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010000CFH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000105H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       ?C_STARTUP
+      01000000H   PUBLIC    CODE     ---       ?C_STARTUP
+
+      ---         MODULE    ---      ---       ?C?CLDOPTR
+      01000058H   PUBLIC    CODE     ---       ?C?CLDOPTR
+
+      ---         MODULE    ---      ---       ?C_INIT
+      010008E7H   PUBLIC    CODE     ---       ?C_START
+
+
+
+*** WARNING L48: IGNORED RECURSIVE CALL
+    CALLED:  _LCD_COMM/LCD
+    CALLER:  _DELAY/LCD
+
+*** WARNING L48: IGNORED RECURSIVE CALL
+    CALLED:  _DELAY/LCD
+    CALLER:  _LCD_COMM/LCD
+
+*** WARNING L15: MULTIPLE CALL TO FUNCTION
+    NAME:    _LCD_STRING/LCD
+    CALLER1: UART_INTERRUPT_HANDLER/MAIN
+    CALLER2: ?C_C51STARTUP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01BFH BYTE (21%) *
+******************************************************************************
+
+Program Size: data=23.0 xdata=0 const=38 code=590
+LX51 RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,2 @@
+.\build\Release\.obj\src\LCD.o,.\build\Release\.obj\src\main.o TO .\build\Release\Servo_lcd
+PRINT(.\build\Release\Servo_lcd.map) REMOVEUNUSED

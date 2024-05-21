@@ -1,0 +1,74 @@
+{
+    "name": "Servo_lcd",
+    "target": "Release",
+    "toolchain": "Keil_C51",
+    "toolchainLocation": "C:\\Keil_v5\\C51",
+    "toolchainCfgFile": "c:\\Users\\abdot\\.vscode\\extensions\\cl.eide-3.16.1\\res\\data\\models\\win32/8051.keil.model.json",
+    "buildMode": "normal|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 4,
+    "rootDir": "d:\\BFOE\\3rd_year\\2nd_term_2024\\Microprocessor based system (b)-E1322\\Projects\\Servo_with_LCD_8051_c",
+    "dumpPath": "build\\Release",
+    "outDir": "build\\Release",
+    "incDirs": [
+        "C:/Keil_v5/C51/INC",
+        "src"
+    ],
+    "libDirs": [],
+    "defines": [
+        "__UVISION_VERSION=526"
+    ],
+    "sourceList": [
+        "src/LCD.c",
+        "src/main.c"
+    ],
+    "sourceParams": {},
+    "sourceParamsMtime": 1716322886937.2185,
+    "options": {
+        "beforeBuildTasks": [],
+        "afterBuildTasks": [],
+        "global": {
+            "ram-mode": "SMALL",
+            "rom-mode": "LARGE"
+        },
+        "c/cpp-compiler": {
+            "optimization-type": "SPEED",
+            "optimization-level": "level-8",
+            "optimization": "8,SPEED"
+        },
+        "asm-compiler": {},
+        "linker": {
+            "remove-unused": true,
+            "output-format": "elf",
+            "use-RTX": "None"
+        },
+        "version": 2
+    },
+    "env": {
+        "workspaceFolder": "d:\\BFOE\\3rd_year\\2nd_term_2024\\Microprocessor based system (b)-E1322\\Projects\\Servo_with_LCD_8051_c",
+        "workspaceFolderBasename": "Servo_with_LCD_8051_c",
+        "OutDir": "d:\\BFOE\\3rd_year\\2nd_term_2024\\Microprocessor based system (b)-E1322\\Projects\\Servo_with_LCD_8051_c\\build\\Release",
+        "OutDirRoot": "build",
+        "OutDirBase": "build\\Release",
+        "ProjectName": "Servo_lcd",
+        "ConfigName": "Release",
+        "ProjectRoot": "d:\\BFOE\\3rd_year\\2nd_term_2024\\Microprocessor based system (b)-E1322\\Projects\\Servo_with_LCD_8051_c",
+        "ExecutableName": "d:\\BFOE\\3rd_year\\2nd_term_2024\\Microprocessor based system (b)-E1322\\Projects\\Servo_with_LCD_8051_c\\build\\Release\\Servo_lcd",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "ToolchainRoot": "C:\\Keil_v5\\C51"
+    },
+    "sha": {
+        "c/cpp-defines": "b5babb9cacba6494fa0692e84c1cf8da",
+        "beforeBuildTasks": "d751713988987e9331980363e24189ce",
+        "afterBuildTasks": "d751713988987e9331980363e24189ce",
+        "global": "c16529a49a409094a87f0219fb297e41",
+        "c/cpp-compiler": "d6401cb3a45dab99a8d0301dd2b94e32",
+        "asm-compiler": "99914b932bd37a50b983c5e7c90ae93b",
+        "linker": "15a323ec34b82176433e3f27b0ac0ffb"
+    }
+}
